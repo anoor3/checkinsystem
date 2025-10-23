@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 47.4% 11.2%;
+
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 47.4% 11.2%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 47.4% 11.2%;
+
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+
+  --primary: 231 70% 55%;
+  --primary-foreground: 210 40% 98%;
+
+  --secondary: 215 35% 90%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+
+  --accent: 199 89% 48%;
+  --accent-foreground: 210 40% 98%;
+
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 210 40% 98%;
+
+  --ring: 231 70% 55%;
+
+  --radius: 10px;
+}
+
+.dark {
+  --background: 224 40% 10%;
+  --foreground: 213 31% 91%;
+
+  --muted: 215 25% 20%;
+  --muted-foreground: 215 20% 70%;
+
+  --popover: 224 40% 10%;
+  --popover-foreground: 213 31% 91%;
+
+  --card: 225 35% 14%;
+  --card-foreground: 213 31% 91%;
+
+  --border: 215 25% 22%;
+  --input: 215 25% 22%;
+
+  --primary: 230 75% 65%;
+  --primary-foreground: 224 40% 10%;
+
+  --secondary: 230 25% 20%;
+  --secondary-foreground: 213 31% 91%;
+
+  --accent: 199 76% 57%;
+  --accent-foreground: 210 40% 98%;
+
+  --destructive: 0 62% 49%;
+  --destructive-foreground: 210 40% 98%;
+
+  --ring: 230 75% 65%;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+}
+
+* {
+  @apply border-border;
+}
+
+.gradient-bg {
+  background-image: radial-gradient(circle at top, rgba(79, 70, 229, 0.18), transparent 55%),
+    radial-gradient(circle at bottom, rgba(56, 189, 248, 0.15), transparent 60%);
+}
+
+.hero-card {
+  backdrop-filter: blur(18px);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.dark .hero-card {
+  background: rgba(15, 23, 42, 0.75);
+}
+
+.print\:hidden {
+  @media print {
+    display: none !important;
+  }
+}
+
+.print\:block {
+  @media print {
+    display: block !important;
+  }
+}
